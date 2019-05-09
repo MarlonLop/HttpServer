@@ -1,18 +1,14 @@
 defmodule HttpServer do
-  @moduledoc """
-  Documentation for HttpServer.
-  """
+  use Application
+  require Logger
 
-  @doc """
-  Hello world.
+  def start(_type, _args) do
+    children = [
+      Plug.Adapters.Cowboy.child_spec(:http, HttpServer.Router, [], port: 8080)
+    ]
 
-  ## Examples
-
-      iex> HttpServer.hello()
-      :world
-
-  """
-  def hello do
-    :world
+    Logger.info "Server online at http://localhost:8080/"
+    Supervisor.start_link(children, strategy: :one_for_one)
   end
+
 end
