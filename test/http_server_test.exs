@@ -26,6 +26,4 @@ defmodule HttpServerTest do
   # test "returns world" do
   #   assert HttpServer.Router.hello() == :world
   # end
-
-
 end
