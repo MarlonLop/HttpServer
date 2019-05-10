@@ -1,4 +1,10 @@
 defmodule HttpServer do
+  @moduledoc """
+  Main HttpServer module
+  Serves static hmtl files saved in the priv/static/ directory
+  To run the server type the following command (whithin project directory):
+          mix run --no-halt
+  """
   use Application
   require Logger
 
