@@ -22,7 +22,6 @@ defmodule HttpServerTest do
              |> Router.call([])
     assert response.status == 404
   end
-
   # test "returns world" do
   #   assert HttpServer.Router.hello() == :world
   # end

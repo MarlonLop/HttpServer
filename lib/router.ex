@@ -34,11 +34,7 @@ defmodule HttpServer.Router do
             # |> send_file(:ok, "priv/static/404.html")
       end
     end
-
     # def hello do
     #   :world
     # end
 end
-  # match _, do:
-  #   send_resp(conn, 404, "404 Page not found")
-  # end

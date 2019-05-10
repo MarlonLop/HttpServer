@@ -4,6 +4,8 @@ defmodule HttpServer do
   Serves static hmtl files saved in the priv/static/ directory
   To run the server type the following command (whithin project directory):
           mix run --no-halt
+  Run tests with:
+          mix test test/http_server_test.exs
   """
   use Application
   require Logger

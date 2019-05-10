@@ -12,7 +12,10 @@ Run the test with:
 ```
 mix test test/http_server_test.exs
 ```
-Html files are saved in the priv/static directory
+Html files are saved in the *priv/static* directory
+
+when sending a curl command there is no need to add '.html' extension
+ex.   *curl localhost:8080/hello*
 
 ## Installation
 
