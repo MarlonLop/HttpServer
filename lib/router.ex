@@ -28,17 +28,17 @@ defmodule HttpServer.Router do
             |> send_file(:ok, "priv/static/#{match_page}.html")
 
           true ->
-            conn
-            |> put_resp_header("content-type", "text/html; charset=utf-8")
-            |> send_file(:ok, "priv/static/404.html")
-
+            send_file(conn, 404, "priv/static/404.html")
+            # conn
+            # |> put_resp_header("content-type", "text/html; charset=utf-8")
+            # |> send_file(:ok, "priv/static/404.html")
       end
+    end
 
-      end
+    # def hello do
+    #   :world
+    # end
 end
-#Logger.info "HTTP/1.1 200 OK"
-#send_resp(conn, 200, "HTTP/1.1 200 OK")
-
   # match _, do:
   #   send_resp(conn, 404, "404 Page not found")
   # end
