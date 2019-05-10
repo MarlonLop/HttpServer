@@ -1,6 +1,18 @@
 # HttpServer
 
-**TODO: Add description**
+Elixir Http server for static html files.
+It uses Plug and Cowboy packages
+
+Start the server with the following command:
+```
+mix run --no-halt
+```
+
+Run the test with:
+```
+mix test test/http_server_test.exs
+```
+Html files are saved in the priv/static directory
 
 ## Installation
 
